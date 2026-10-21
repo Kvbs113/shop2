@@ -1,7 +1,7 @@
 # Shop — prosta aplikacja warstwowa
 
 Projekt startowy do zajęć: Java 21, Spring Boot, Hibernate (JPA), baza H2
-oraz testy w Groovy i Spocku. Aplikacja obsługuje tylko zamówienia (`Order`).
+oraz testy w Groovy i Spocku. Aplikacja obsługuje tylko zamówienia (`CustomerOrder`).
 Jedno zamówienie dotyczy jednego produktu opisanego nazwą.
 
 ## Warstwy
@@ -22,11 +22,11 @@ Pakiety znajdują się w `src/main/java/edu/arch/shop`:
 
 | Pakiet | Odpowiedzialność |
 | --- | --- |
-| `order.controller` | `OrderController` — endpointy REST. |
-| `order.service` | `OrderService` — walidacja i logika zamówień. |
-| `order.repository` | `OrderRepository` — zapis i odczyt z bazy. |
-| `order.entity` | `Order` — encja Hibernate. |
-| `order.dto` | `OrderRequest` i `OrderResponse` — dane wejściowe i wyjściowe API. |
+| `order.controller` | `CustomerController` — endpointy REST. |
+| `order.service` | `CustomerService` — walidacja i logika zamówień. |
+| `order.repository` | `CustomerRepository` — zapis i odczyt z bazy. |
+| `order.entity` | `CustomerOrder` — encja Hibernate. |
+| `order.dto` | `CustomerRequest` i `CustomerResponse` — dane wejściowe i wyjściowe API. |
 | `customer.entity` | Tylko encja `Customer` z polami `id` i `name`. |
 
 Kontroler wywołuje serwis, a serwis repozytorium. API zwraca DTO.
